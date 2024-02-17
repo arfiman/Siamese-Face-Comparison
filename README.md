@@ -7,6 +7,8 @@
 The dataset can be downloaded via:
 1. Kaggle (https://www.kaggle.com/datasets/arifnuriman/indonesian-public-figure-faces)
 
+Data is collected through online-available image by google search using python script [1 Image Scraping From Google For Indonesian Faces Classification.ipynb](https://github.com/arfiman/Siamese-Face-Comparison/blob/main/1%20Image%20Scraping%20From%20Google%20For%20Indonesian%20Faces%20Classification.ipynb)
+
 # Development Step
 ![pipeline](https://github.com/verifikasiin/siamese-face-recognition-model/assets/65358140/d7a74c70-76bc-4424-8648-11aae2298d29)
 
@@ -44,4 +46,4 @@ For the complete code checkout the notebook on https://github.com/verifikasiin/s
 4. Invoke the interpreter for the encoder model
 5. Measure the distance between encoded value of two image
 
-For the complete code on inference, checkout the python script https://github.com/verifikasiin/siamese-face-recognition-model/blob/main/5%20face_verification_lite.py 
+For the complete code on inference, check out the python script https://github.com/verifikasiin/siamese-face-recognition-model/blob/main/5%20face_verification_lite.py 
