@@ -1,13 +1,18 @@
 # What you need
 1. Code Platform: Google Collaboration / Kaggle and VSCode
 2. Programming Language: Python
-3. Library: tensorflow, cv2, skearn, os, request, bs4, numpy
+3. Library: tensorflow, cv2, sklearn, os, numpy
 
 # Dataset
-The dataset can be downloaded via:
-1. Kaggle (https://www.kaggle.com/datasets/arifnuriman/indonesian-public-figure-faces)
+No dataset is included in this repository. Collect your own face photos, with the consent of the people in them (or use a public face dataset within its licence terms). Do not scrape photos from the internet.
 
-Data is collected through online-available image by google search using python script [1 Image Scraping From Google For Indonesian Faces Classification.ipynb](https://github.com/arfiman/Siamese-Face-Comparison/blob/main/1%20Image%20Scraping%20From%20Google%20For%20Indonesian%20Faces%20Classification.ipynb)
+- **People:** photos of several different people. The notebooks split the dataset by person into training and test sets, so you need enough people for both.
+- **Photos per person:** multiple. The model trains on triplets (anchor, positive, negative), so every person needs at least 2 photos. 10 or more is better, and the notebooks use up to 10 per person.
+- **Variety:** different lighting, angles, expressions, accessories (glasses, hats) and days.
+- **Quality:** one clearly visible face per photo.
+- **Layout:** one folder per person, named with an ID rather than a real name, holding the cropped face images: `Extracted/<person_id>/<image>.jpg`
+- **Cropping:** [2 Preprocess & Train Model.ipynb](https://github.com/arfiman/Siamese-Face-Comparison/blob/main/2%20Preprocess%20%26%20Train%20Model.ipynb) includes a helper (Haar cascade) that crops faces in place. It deletes the original files, so run it on a copy.
+- **Path:** set `CUSTOM_ROOT` in the notebooks to your dataset folder.
 
 # Development Step
 ![pipeline](https://github.com/verifikasiin/siamese-face-recognition-model/assets/65358140/d7a74c70-76bc-4424-8648-11aae2298d29)
